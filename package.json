@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MariuszDziecielski/portfolio.git"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Mariusz Dziecielski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MariuszDziecielski/portfolio/issues"
+  },
+  "homepage": "https://github.com/MariuszDziecielski/portfolio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}

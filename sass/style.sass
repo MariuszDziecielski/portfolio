@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&subset=latin-ext')
+@import reset
+body 
+    margin: 0
+    padding: 0
+    font-size: 62.5%
+    text-align: left
+    padding-top: 100px
+    background-color: #f7f6ed
+    color: #525252
+    font-family: 'Fira Mono', monospace
+* 
+    box-sizing: border-box    
+img 
+    max-width: 100%
+    height: auto
+.flex
+    display: -webkit-flex
+    display: flex
+.items-center
+    -webkit-align-items: center
+    align-items: center
+.content-center
+    -webkit-justify-content: center
+    justify-content: center
+.flex-wrap
+    -webkit-flex-wrap: wrap
+    flex-wrap: wrap
+/* Container */  
+.container
+    max-width: 1200px
+    margin: 0 auto
+/* Header */
+header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    margin: 0 auto
+    border-bottom: 1px solid #eee
+    z-index: 100
+    background: rgba(247, 246, 237, 1)
+    .navbar-default
+        background: rgba(247, 246, 237, 1)
+        font-family: 'Overpass Mono', monospace
+        margin: 0 auto
+        font-size: 1.7em
+        .navbar-collapse
+            max-height: 100%
+            .navbar-nav
+                list-style: none
+                margin: 0
+                padding: 0
+                li
+                    font-weight: 700
+                    padding-right: 60px
+                    &.active
+                        a
+                            background: rgba(247, 246, 237, 1)
+                            cursor: default
+                            color: #d99f0d
+                            &:hover
+                                background: rgba(247, 246, 237, 1)
+                    a
+                        padding: 0
+                        line-height: 100px
+                        color: #525252
+                        text-decoration: none
+                        &:hover
+                            color: #d99f0d
+                            background: rgba(247, 246, 237, 1)    
+/* Hello */
+.hello
+    padding: 100px 0
+    .container
+        font-weight: 600
+        h1
+            display: none
+        h2
+            font-size: 5em
+            max-width: 900px
+            line-height: 64px
+            span
+                color: #d99f0d
+/* Known_technologies */
+.known_technologies
+    background-color: #efeedc
+    margin: 0 30px
+    padding-top: 100px
+    .container
+        h2
+            padding: 0 0 50px 0
+            width: 100%
+            font-size: 3.3em
+            font-weight: 600
+        h3
+            padding: 0 0 50px 0
+            width: 100%
+            font-size: 2.5em
+            font-weight: 600
+        .chart
+            margin-right: 50px
+            background-color: #f7f6ed
+            min-height: 140px
+            min-width: 250px
+            margin-bottom: 70px
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+            transform: translate(0,-1px)
+            img
+                height: 80px 
+            .php-logo
+                height: 83px
+            .seo-logo
+                height: 83px
+/* Unknown_technologies */
+.unknown_technologies
+    background-color: #efeedc
+    margin: 0 30px
+    padding-top: 100px
+    .container
+        h2
+            padding: 0 0 50px 0
+            width: 100%
+            font-size: 3.3em
+            font-weight: 600
+        .chart
+            margin-right: 50px
+            background-color: #f7f6ed
+            min-height: 140px
+            min-width: 250px
+            margin-bottom: 70px
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+            transform: translate(0,-1px) 
+            img
+                height: 80px  
+            .react-logo
+                height: 95px
+            .express-logo
+                height: 140px
+/* Projects */
+.projects
+    background-color: #efeedc
+    margin: 0 30px
+    padding-top: 100px
+    .container
+        h2
+            padding: 0 0 50px 0
+            width: 100%
+            font-size: 3.3em
+            font-weight: 600
+        .chart
+            margin-right: 50px
+            max-height: 280px
+            max-width: 498px
+            margin-bottom: 70px
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+            transform: translate(0,-1px)
+            position: relative
+            overflow: hidden
+            img
+                max-height: 280px 
+            .layer     
+                position: absolute
+                top: 0
+                left: 0
+                right: auto
+                display: block
+                height: 0
+                transition: 1.4s cubic-bezier(1, -0.25, 0, 1.04)
+                width: 100%
+                background-color: rgba(0, 0, 0, 0.5)
+                text-align: center
+                overflow: hidden
+                .icon-btn
+                    font-size: 4em
+                    height: 65px
+                    width: 65px
+                    line-height: 55px
+                    position: relative
+                    top: 50%
+                    left: auto
+                    transform: translateY(-50%)
+                    margin: 0 18px
+                    color: #525252
+                    background-color: #f7f6ed
+                    border-radius: 7px
+                    cursor: pointer
+                    display: inline-block
+                    a
+                        color: #525252
+                        .fa 
+                            margin-top: 10px
+                    p
+                        text-align: center
+                        color: white
+                        font-size: 0.35em
+                        font-weight: 700
+                        color: #f7f6ed
+                        cursor: default
+                        font-family: 'Fira Mono', monospace
+            &:hover
+                .layer
+                    height: 100%
+/* Footer */          
+footer
+    padding: 100px 0
+    font-weight: 600
+    .container
+        h3
+            width: 100%
+            font-size: 3.3em
+            line-height: 44px
+        p
+            font-size: 3.3em
+            line-height: 44px
+            max-width: 750px
+            a
+                text-decoration: none
+                color: #d99f0d
+                &:hover
+                    color: #a97c0a
+        .email
+            padding-top: 50px
+            font-size: 1.7em
+            line-height: 26px
+            font-weight: normal
+            font-family: 'Overpass Mono', monospace
+            a
+                position: relative
+                display: inline-block
+                &:hover:after
+                    width: 100%
+                &:after
+                    content: ''
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    width: 0%
+                    border-bottom: 1px solid #a97c0a
+                    transition: 0.5s ease
+/* Media queries */
+/* For larger computers: */
+@media (max-width: 1199px)
+    .container
+        width: 100%
+        padding: 0 20px
+    .hello
+        .container
+            h2
+                font-size: 4.5em
+                max-width: 80vw
+/* For computers: */
+@media (max-width: 991px)
+    .hello
+        .container
+            h2
+                font-size: 3.5em
+                max-width: 80vw
+    .known_technologies
+        .container
+            h2
+                font-size: 3em
+            h3
+                font-size: 2.2em
+    .unknown_technologies
+        .container
+            h2
+                font-size: 3em
+    .projects
+        .container
+            h2
+                font-size: 3em 
+/* For tablets: */
+@media (max-width: 767px)
+    body
+        padding-top: 50px
+    header
+        .navbar-default
+            .container
+                .navbar-header
+                    .navbar-toggle
+                        background-color: inherit
+                        &:hover
+                            background-color: inherit
+                .navbar-collapse
+                    .navbar-nav
+                        li
+                            a
+                                line-height: 60px
+    .hello
+        padding: 50px 0
+        .container
+            h2
+                font-size: 3em
+                text-align: center
+                max-width: 100%
+    .known_technologies
+        padding-top: 50px
+        .container
+            -webkit-flex-direction: column
+            flex-direction: column
+            -webkit-align-items: center
+            align-items: center
+            h2
+                font-size: 2.8em
+                text-align: center
+            h3
+                font-size: 2em
+                text-align: center
+            .chart
+                margin-right: 0
+    .unknown_technologies
+        padding-top: 50px
+        .container
+            -webkit-flex-direction: column
+            flex-direction: column
+            -webkit-align-items: center
+            align-items: center
+            h2
+                font-size: 2.8em
+                text-align: center
+            h3
+                text-align: center
+            .chart
+                margin-right: 0
+    .projects
+        padding-top: 50px
+        .container
+            -webkit-flex-direction: column
+            flex-direction: column
+            -webkit-align-items: center
+            align-items: center
+            h2
+                font-size: 2.8em   
+                text-align: center
+            .chart
+                margin-right: 0
+                .layer 
+                    height: 100%
+                    background-color: inherit
+                    .icon-btn
+                        height: 1.6em
+                        width: 1.6em
+                        line-height: 0.5em
+                        margin: 0 0.4em
+                        a
+                            .fa
+                                font-size: 1em
+                        p
+                            display: none
+    footer
+        padding: 50px 0
+        .container
+            text-align: center
+            h3
+                font-size: 2.8em
+            p
+                font-size: 2.8em
+/* For smart phones: */    
+@media (max-width: 479px)
+    .container
+        padding: 0 15px
+    .hello
+        .container
+            h2
+                font-size: 2.5em
+                line-height: 40px
+    .known_technologies
+        margin: 0 10px
+        .container
+            h2
+                font-size: 2.2em
+            h3
+                font-size: 1.8em
+            .chart
+                margin-right: 0
+                width: 65vw
+                min-width: 65vw
+    .unknown_technologies
+        margin: 0 10px
+        .container
+            h2
+                font-size: 2.2em
+            h3
+                font-size: 1.8em
+            .chart
+                width: 65vw
+                min-width: 65vw
+    .projects
+        margin: 0 10px
+        .container
+            h2
+                font-size: 2.2em
+            .chart
+                .layer 
+                    .icon-btn
+                        height: 1em
+                        width: 1em
+                        line-height: 0.5em
+                        margin: 0 0.3em
+                        a
+                            .fa
+                                font-size: 0.6em
+    footer
+        .container
+            h3
+                font-size: 2.2em
+            p
+                font-size: 2.2em
+            .email
+                font-size: 1.55em
