@@ -7,9 +7,9 @@ body
     font-size: 62.5%
     text-align: left
     padding-top: 100px
-    background-color: #f7f6ed
-    color: #525252
+    background: #fff
     font-family: 'Fira Mono', monospace
+    color: #525252
 * 
     box-sizing: border-box    
 img 
@@ -18,9 +18,15 @@ img
 .flex
     display: -webkit-flex
     display: flex
+.column
+    -webkit-flex-direction: column
+    flex-direction: column
 .items-center
     -webkit-align-items: center
     align-items: center
+.items-start
+    -webkit-align-items: flex-start
+    align-items: flex-start
 .content-center
     -webkit-justify-content: center
     justify-content: center
@@ -40,12 +46,11 @@ header
     margin: 0 auto
     border-bottom: 1px solid #eee
     z-index: 100
-    background: rgba(247, 246, 237, 1)
     .navbar-default
-        background: rgba(247, 246, 237, 1)
+        background: #fff
         font-family: 'Overpass Mono', monospace
         margin: 0 auto
-        font-size: 1.7em
+        font-size: 1.54em
         .navbar-collapse
             max-height: 100%
             .navbar-nav
@@ -53,23 +58,21 @@ header
                 margin: 0
                 padding: 0
                 li
-                    font-weight: 700
+                    font-weight: normal
                     padding-right: 60px
                     &.active
                         a
-                            background: rgba(247, 246, 237, 1)
+                            background: #fff
                             cursor: default
-                            color: #d99f0d
-                            &:hover
-                                background: rgba(247, 246, 237, 1)
+                            color: #f00658
+                            text-decoration: line-through     
                     a
                         padding: 0
                         line-height: 100px
                         color: #525252
                         text-decoration: none
                         &:hover
-                            color: #d99f0d
-                            background: rgba(247, 246, 237, 1)    
+                            color: #f00658          
 /* Hello */
 .hello
     padding: 100px 0
@@ -78,14 +81,16 @@ header
         h1
             display: none
         h2
-            font-size: 5em
+            font-size: 4em
             max-width: 900px
             line-height: 64px
             span
-                color: #d99f0d
+                color: #f00658
+                &.language
+                    text-transform: uppercase
 /* Known_technologies */
 .known_technologies
-    background-color: #efeedc
+    background-color: #f2f2f2
     margin: 0 30px
     padding-top: 100px
     .container
@@ -94,28 +99,39 @@ header
             width: 100%
             font-size: 3.3em
             font-weight: 600
+            color: #525252               
         h3
+            color: #525252
             padding: 0 0 50px 0
             width: 100%
             font-size: 2.5em
-            font-weight: 600
         .chart
+            position: relative
             margin-right: 50px
-            background-color: #f7f6ed
-            min-height: 140px
+            background-color: #fff
+            min-height: 240px
             min-width: 250px
             margin-bottom: 70px
             box-shadow: 0 15px 20px rgba(0,0,0,0.15)
-            transform: translate(0,-1px)
             img
-                height: 80px 
+                margin: 0 auto
+                margin-top: 35px
+                height: 80px
             .php-logo
                 height: 83px
             .seo-logo
                 height: 83px
+            .chart-text     
+                padding: 30px 25px 25px 
+                h4
+                    font-weight: 400
+                    font-size: 3em
+                    line-height: 46px
+                    position: absolute
+                    bottom: 25px
 /* Unknown_technologies */
 .unknown_technologies
-    background-color: #efeedc
+    background-color: #f2f2f2
     margin: 0 30px
     padding-top: 100px
     .container
@@ -124,23 +140,35 @@ header
             width: 100%
             font-size: 3.3em
             font-weight: 600
+            color: #525252
         .chart
+            position: relative
             margin-right: 50px
-            background-color: #f7f6ed
-            min-height: 140px
+            background-color: #fff
+            min-height: 240px
             min-width: 250px
             margin-bottom: 70px
             box-shadow: 0 15px 20px rgba(0,0,0,0.15)
-            transform: translate(0,-1px) 
             img
+                margin: 0 auto
+                margin-top: 35px
                 height: 80px  
             .react-logo
                 height: 95px
             .express-logo
                 height: 140px
+                margin-top: 3px
+            .chart-text     
+                padding: 30px 25px 25px 
+                h3
+                    font-weight: 400
+                    font-size: 3em
+                    line-height: 46px
+                    position: absolute
+                    bottom: 25px
 /* Projects */
 .projects
-    background-color: #efeedc
+    background-color: #f2f2f2
     margin: 0 30px
     padding-top: 100px
     .container
@@ -149,63 +177,69 @@ header
             width: 100%
             font-size: 3.3em
             font-weight: 600
+            color: #525252
         .chart
+            background-color: #fff
             margin-right: 50px
-            max-height: 280px
+            max-height: 540px
             max-width: 498px
             margin-bottom: 70px
-            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
-            transform: translate(0,-1px)
-            position: relative
-            overflow: hidden
+            &:hover
+                box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+                transform: translate(0,-1px)
+                .chart-text
+                    .chart-links
+                        a
+                            color: #F00658
             img
                 max-height: 280px 
-            .layer     
-                position: absolute
-                top: 0
-                left: 0
-                right: auto
-                display: block
-                height: 0
-                transition: 1.4s cubic-bezier(1, -0.25, 0, 1.04)
-                width: 100%
-                background-color: rgba(0, 0, 0, 0.5)
-                text-align: center
-                overflow: hidden
-                .icon-btn
-                    font-size: 4em
-                    height: 65px
-                    width: 65px
-                    line-height: 55px
-                    position: relative
-                    top: 50%
-                    left: auto
-                    transform: translateY(-50%)
-                    margin: 0 18px
+                margin-bottom: 30px
+            .chart-text     
+                padding: 30px 25px 25px
+                .chart-sub
+                    text-transform: uppercase
+                    font-weight: 400
+                    font-size: 1.3em
+                    color: #ccc
+                    line-height: 16px
+                h3
+                    font-weight: 400
+                    font-size: 3em
+                    line-height: 36px
+                    padding: 10px 0px 0px
+                .chart-links
                     color: #525252
-                    background-color: #f7f6ed
-                    border-radius: 7px
-                    cursor: pointer
-                    display: inline-block
-                    a
-                        color: #525252
-                        .fa 
-                            margin-top: 10px
-                    p
-                        text-align: center
-                        color: white
-                        font-size: 0.35em
-                        font-weight: 700
-                        color: #f7f6ed
-                        cursor: default
+                    margin-top: 70px
+                    line-height: 26px
+                    a 
+                        position: relative
+                        display: inline-block
+                        color: #ddd
+                        font-size: 1.3em
+                        font-weight: normal
                         font-family: 'Fira Mono', monospace
-            &:hover
-                .layer
-                    height: 100%
+                        margin-right: 50px
+                        &:visited
+                            text-decoration: none
+                        &:active
+                            text-decoration: none
+                        &:hover
+                            text-decoration: none
+                        &:hover:after
+                            width: 100%
+                        &:after
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            content: ''
+                            width: 0%
+                            border-bottom: 1px solid #ae0440
+                            transition: 0.5s ease
 /* Footer */          
 footer
     padding: 100px 0
     font-weight: 600
+    padding-bottom: 200px
     .container
         h3
             width: 100%
@@ -217,9 +251,9 @@ footer
             max-width: 750px
             a
                 text-decoration: none
-                color: #d99f0d
+                color: #f00658
                 &:hover
-                    color: #a97c0a
+                    color: #ae0440
         .email
             padding-top: 50px
             font-size: 1.7em
@@ -237,8 +271,15 @@ footer
                     bottom: 0
                     left: 0
                     width: 0%
-                    border-bottom: 1px solid #a97c0a
+                    border-bottom: 1px solid #ae0440
                     transition: 0.5s ease
+        .phone
+            padding-top: 20px
+            font-size: 1.7em
+            line-height: 26px
+            font-weight: normal
+            font-family: 'Overpass Mono', monospace
+            color: #f00658
 /* Media queries */
 /* For larger computers: */
 @media (max-width: 1199px)
@@ -320,8 +361,6 @@ footer
             h2
                 font-size: 2.8em
                 text-align: center
-            h3
-                text-align: center
             .chart
                 margin-right: 0
     .projects
@@ -336,19 +375,12 @@ footer
                 text-align: center
             .chart
                 margin-right: 0
-                .layer 
+                .chart-text 
                     height: 100%
                     background-color: inherit
-                    .icon-btn
-                        height: 1.6em
-                        width: 1.6em
-                        line-height: 0.5em
-                        margin: 0 0.4em
+                    .chart-links
                         a
-                            .fa
-                                font-size: 1em
-                        p
-                            display: none
+                            color: #F00658      
     footer
         padding: 50px 0
         .container
@@ -377,31 +409,25 @@ footer
                 margin-right: 0
                 width: 65vw
                 min-width: 65vw
+                .chart-text 
+                    h4
+                        font-size: 2.3em
     .unknown_technologies
         margin: 0 10px
         .container
             h2
                 font-size: 2.2em
-            h3
-                font-size: 1.8em
             .chart
                 width: 65vw
                 min-width: 65vw
+                .chart-text 
+                    h3
+                        font-size: 2.3em
     .projects
         margin: 0 10px
         .container
             h2
                 font-size: 2.2em
-            .chart
-                .layer 
-                    .icon-btn
-                        height: 1em
-                        width: 1em
-                        line-height: 0.5em
-                        margin: 0 0.3em
-                        a
-                            .fa
-                                font-size: 0.6em
     footer
         .container
             h3
