@@ -65,14 +65,25 @@ header
                             background: #fff
                             cursor: default
                             color: #f00658
-                            text-decoration: line-through     
+                            &:hover:after
+                                width: 0%    
                     a
                         padding: 0
                         line-height: 100px
                         color: #525252
                         text-decoration: none
                         &:hover
-                            color: #f00658          
+                            color: #f00658  
+                        &:hover:after
+                                width: 100%
+                        &:after
+                                content: ''
+                                position: absolute
+                                bottom: 37px
+                                left: 0
+                                width: 0%
+                                border-bottom: 1px solid #f00658
+                                transition: 0.5s ease      
 /* Hello */
 .hello
     padding: 100px 0
@@ -81,7 +92,7 @@ header
         h1
             display: none
         h2
-            font-size: 4em
+            font-size: 3em
             max-width: 900px
             line-height: 64px
             span
@@ -97,14 +108,14 @@ header
         h2
             padding: 0 0 50px 0
             width: 100%
-            font-size: 3.3em
+            font-size: 2.5em
             font-weight: 600
             color: #525252               
         h3
             color: #525252
             padding: 0 0 50px 0
             width: 100%
-            font-size: 2.5em
+            font-size: 2.2em
         .chart
             position: relative
             margin-right: 50px
@@ -138,7 +149,7 @@ header
         h2
             padding: 0 0 50px 0
             width: 100%
-            font-size: 3.3em
+            font-size: 2.5em
             font-weight: 600
             color: #525252
         .chart
@@ -175,7 +186,7 @@ header
         h2
             padding: 0 0 50px 0
             width: 100%
-            font-size: 3.3em
+            font-size: 2.5em
             font-weight: 600
             color: #525252
         .chart
@@ -243,10 +254,10 @@ footer
     .container
         h3
             width: 100%
-            font-size: 3.3em
+            font-size: 3em
             line-height: 44px
         p
-            font-size: 3.3em
+            font-size: 3em
             line-height: 44px
             max-width: 750px
             a
@@ -289,29 +300,55 @@ footer
     .hello
         .container
             h2
-                font-size: 4.5em
-                max-width: 80vw
+                font-size: 2.8em
+                max-width: 75vw
+    .known_technologies
+        .container
+            h2
+                font-size: 2.3em
+            h3
+                font-size: 2em
+    .unknown_technologies
+        .container
+            h2
+                font-size: 2.3em
+    .projects
+        .container
+            h2
+                font-size: 2.3em
+    footer
+        .container
+            h3
+                font-size: 2.8em
+            p
+                font-size: 2.8em
+                max-width: 75vw
 /* For computers: */
 @media (max-width: 991px)
     .hello
         .container
             h2
-                font-size: 3.5em
-                max-width: 80vw
+                font-size: 2.4em
     .known_technologies
         .container
             h2
-                font-size: 3em
+                font-size: 1.9em
             h3
-                font-size: 2.2em
+                font-size: 1.6em
     .unknown_technologies
         .container
             h2
-                font-size: 3em
+                font-size: 1.9em
     .projects
         .container
             h2
-                font-size: 3em 
+                font-size: 1.9em 
+    footer
+        .container
+            h3
+                font-size: 2.4em
+            p
+                font-size: 2.4em
 /* For tablets: */
 @media (max-width: 767px)
     body
@@ -333,7 +370,7 @@ footer
         padding: 50px 0
         .container
             h2
-                font-size: 3em
+                font-size: 2.3em
                 text-align: center
                 max-width: 100%
     .known_technologies
@@ -344,10 +381,10 @@ footer
             -webkit-align-items: center
             align-items: center
             h2
-                font-size: 2.8em
+                font-size: 1.8em
                 text-align: center
             h3
-                font-size: 2em
+                font-size: 1.5em
                 text-align: center
             .chart
                 margin-right: 0
@@ -359,7 +396,7 @@ footer
             -webkit-align-items: center
             align-items: center
             h2
-                font-size: 2.8em
+                font-size: 1.8em
                 text-align: center
             .chart
                 margin-right: 0
@@ -371,7 +408,7 @@ footer
             -webkit-align-items: center
             align-items: center
             h2
-                font-size: 2.8em   
+                font-size: 1.8em   
                 text-align: center
             .chart
                 margin-right: 0
@@ -384,11 +421,14 @@ footer
     footer
         padding: 50px 0
         .container
-            text-align: center
             h3
-                font-size: 2.8em
+                font-size: 2.3em
+                text-align: center
+                max-width: 100%
             p
-                font-size: 2.8em
+                font-size: 2.3em
+                text-align: center
+                max-width: 100%
 /* For smart phones: */    
 @media (max-width: 479px)
     .container
@@ -396,15 +436,15 @@ footer
     .hello
         .container
             h2
-                font-size: 2.5em
+                font-size: 2em
                 line-height: 40px
     .known_technologies
         margin: 0 10px
         .container
             h2
-                font-size: 2.2em
+                font-size: 1.6em
             h3
-                font-size: 1.8em
+                font-size: 1.3em
             .chart
                 margin-right: 0
                 width: 65vw
@@ -416,7 +456,7 @@ footer
         margin: 0 10px
         .container
             h2
-                font-size: 2.2em
+                font-size: 1.6em
             .chart
                 width: 65vw
                 min-width: 65vw
@@ -427,12 +467,12 @@ footer
         margin: 0 10px
         .container
             h2
-                font-size: 2.2em
+                font-size: 1.6em
     footer
         .container
             h3
-                font-size: 2.2em
+                font-size: 2em
             p
-                font-size: 2.2em
+                font-size: 2em
             .email
                 font-size: 1.55em
