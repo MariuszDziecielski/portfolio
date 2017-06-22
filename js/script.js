@@ -1,9 +1,7 @@
 $(function () {
     AOS.init({
-        offset: 200,
-        duration: 600,
-        easing: 'ease-in-sine',
-        delay: 300,
+        duration: 1200,
+        easing: 'linear',
         disable: $(window).width() < 768
     });
     $('header li').each(function (index, elem) {
@@ -28,11 +26,4 @@ $(function () {
             AOS.refreshHard();
         });
     });
-    if ($(window).width() < 1196) {
-        $('.projects .chart').removeAttr('data-aos-delay');
-    }
-    if ($(window).width() < 1000) {
-        $('.known_technologies .chart').removeAttr('data-aos-delay');
-        $('.unknown_technologies .chart').removeAttr('data-aos-delay');
-    }
 });
