@@ -7,7 +7,7 @@ body
     font-size: 62.5%
     text-align: left
     padding-top: 100px
-    background: #fff
+    background: #fff 
     font-family: 'Fira Mono', monospace
     color: #525252
 * 
@@ -38,11 +38,11 @@ img
     max-width: 1200px
     margin: 0 auto
 [data-aos=slide-down]
-    transform: translateY(-20%)
+    transform: translateY(-10%)
 [data-aos=slide-left]
-    transform: translateX(10%)
+    transform: translateX(5%)
 [data-aos=slide-up]
-    transform: translateY(20%)  
+    transform: translateY(10%)  
 /* Header */
 header
     position: fixed
@@ -94,7 +94,7 @@ header
 .hello
     padding: 100px 0
     .container
-        font-weight: 600
+        font-weight: 700
         h1
             display: none
         h2
@@ -198,21 +198,25 @@ header
         .chart
             background-color: #fff
             margin-right: 50px
-            max-height: 540px
+            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+            max-height: 555px
             max-width: 498px
             margin-bottom: 70px
             &:hover
-                box-shadow: 0 15px 20px rgba(0,0,0,0.15)
-                transform: translate(0,-1px)
+                box-shadow: 0 25px 30px rgba(0,0,0,0.15)
+                transform: translate(0,-10px)
+                transform: scale(1.01)
+                transition: 0.5s ease
                 .chart-text
                     .chart-links
                         a
                             color: #F00658
             img
                 max-height: 280px 
-                margin-bottom: 30px
-            .chart-text     
-                padding: 30px 25px 25px
+                margin-bottom: 40px
+            .chart-text 
+                width: 100%
+                padding: 0px 25px 0px
                 .chart-sub
                     text-transform: uppercase
                     font-weight: 400
@@ -223,19 +227,20 @@ header
                     font-weight: 400
                     font-size: 3em
                     line-height: 36px
-                    padding: 10px 0px 0px
+                    padding-top: 25px
                 .chart-links
                     color: #525252
-                    margin-top: 70px
+                    margin-top: 40px
                     line-height: 26px
                     a 
                         position: relative
                         display: inline-block
                         color: #ddd
-                        font-size: 1.3em
+                        font-size: 1.54em
                         font-weight: normal
                         font-family: 'Fira Mono', monospace
                         margin-right: 50px
+                        padding: 30px 0
                         &:visited
                             text-decoration: none
                         &:active
@@ -246,7 +251,7 @@ header
                             width: 100%
                         &:after
                             position: absolute
-                            bottom: 0
+                            bottom: 30px
                             left: 0
                             content: ''
                             width: 0%
@@ -419,8 +424,8 @@ footer
             .chart
                 margin-right: 0
                 .chart-text 
-                    height: 100%
-                    background-color: inherit
+                    -height: 100%
+                    -background-color: inherit
                     .chart-links
                         a
                             color: #F00658      
