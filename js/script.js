@@ -1,9 +1,11 @@
 $(function () {
+    /*
     AOS.init({
         duration: 1200,
         easing: 'linear',
         disable: $(window).width() < 768
     });
+    */
     $('header li').each(function (index, elem) {
         $(elem).click(function () {
             $('header li').removeClass('active');
@@ -23,7 +25,7 @@ $(function () {
                 easing: 'easeOutBack',
                 padding: 40
             });
-            AOS.refreshHard();
+            //AOS.refreshHard();
         });
     });
 });

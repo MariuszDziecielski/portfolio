@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700&subset=latin-ext')
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&subset=latin-ext')
 @import reset
 body 
     margin: 0
@@ -8,7 +6,7 @@ body
     text-align: left
     padding-top: 100px
     background: #fff 
-    font-family: 'Fira Mono', monospace
+    font-family: Helvetica, Arial, sans-serif
     color: #525252
 * 
     box-sizing: border-box    
@@ -37,12 +35,12 @@ img
 .container
     max-width: 1200px
     margin: 0 auto
-[data-aos=slide-down]
-    transform: translateY(-10%)
-[data-aos=slide-left]
-    transform: translateX(5%)
-[data-aos=slide-up]
-    transform: translateY(10%)  
+/*[data-aos=slide-down]
+    transform: translateY(-10%)*/
+/*[data-aos=slide-left]
+    transform: translateX(5%)*/
+/*[data-aos=slide-up]
+    transform: translateY(10%)*/
 /* Header */
 header
     position: fixed
@@ -54,9 +52,9 @@ header
     z-index: 100
     .navbar-default
         background: #fff
-        font-family: 'Overpass Mono', monospace
+        font-family: Courier, monospace
         margin: 0 auto
-        font-size: 1.54em
+        font-size: 1.6em
         .navbar-collapse
             max-height: 100%
             .navbar-nav
@@ -81,29 +79,31 @@ header
                         &:hover
                             color: #f00658  
                         &:hover:after
-                                width: 100%
+                            width: 100%
                         &:after
-                                content: ''
-                                position: absolute
-                                bottom: 37px
-                                left: 0
-                                width: 0%
-                                border-bottom: 1px solid #f00658
-                                transition: 0.5s ease      
+                            content: ''
+                            position: absolute
+                            bottom: 37px
+                            left: 0
+                            width: 0%
+                            border-bottom: 1px solid #f00658
+                            transition: 0.5s ease      
 /* Hello */
 .hello
     padding: 100px 0
     .container
-        font-weight: 700
+        font-weight: 600
         h1
             display: none
         h2
-            font-size: 3em
-            max-width: 900px
-            line-height: 64px
+            font-size: 4.5em
+            max-width: 1100px
+            line-height: 60px
+            padding-right: 13%
             span
                 color: #f00658
                 &.language
+                    color: #525252
                     text-transform: uppercase
 /* Known_technologies */
 .known_technologies
@@ -114,22 +114,18 @@ header
         h2
             padding: 0 0 50px 0
             width: 100%
-            font-size: 2.5em
+            font-size: 3.5em
             font-weight: 600
             color: #525252
-        h3
-            color: #525252
-            padding: 0 0 50px 0
-            width: 100%
-            font-size: 2.2em
         .chart
             position: relative
-            margin-right: 50px
+            min-height: 300px
             background-color: #fff
-            min-height: 240px
-            min-width: 250px
-            margin-bottom: 70px
-            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+            width: calc(50% - 15px)
+            margin-right: 30px
+            margin-bottom: 30px
+            &:nth-child(2n+1)
+                margin-right: 0
             img
                 margin: 0 auto
                 margin-top: 35px
@@ -138,14 +134,23 @@ header
                 height: 83px
             .seo-logo
                 height: 83px
-            .chart-text     
-                padding: 30px 25px 25px 
-                h4
+            .chart-text 
+                margin-top: 40px
+                width: 100%
+                padding: 0px 25px 0px
+                .chart-sub
+                    text-transform: uppercase
                     font-weight: 400
-                    font-size: 3em
-                    line-height: 46px
+                    font-size: 1.3em
+                    color: #ccc
+                    line-height: 20px
+                h3
+                    font-weight: 400
+                    font-size: 2.5em
+                    line-height: 36px
                     position: absolute
                     bottom: 25px
+/* usunac pozniej????????? */                  
 /* Unknown_technologies */
 .unknown_technologies
     background-color: #f2f2f2
@@ -164,8 +169,7 @@ header
             background-color: #fff
             min-height: 240px
             min-width: 250px
-            margin-bottom: 70px
-            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+            margin-bottom: 50px
             img
                 margin: 0 auto
                 margin-top: 35px
@@ -183,38 +187,42 @@ header
                     line-height: 46px
                     position: absolute
                     bottom: 25px
+/* usunac pozniej????????? */
 /* Projects */
 .projects
     background-color: #f2f2f2
     margin: 0 30px
-    padding-top: 100px
+    padding: 100px 0
     .container
         h2
             padding: 0 0 50px 0
             width: 100%
-            font-size: 2.5em
+            font-size: 3.5em
             font-weight: 600
             color: #525252
         .chart
+            position: relative
+            min-height: 600px
             background-color: #fff
-            margin-right: 50px
-            box-shadow: 0 15px 20px rgba(0,0,0,0.15)
-            max-height: 555px
-            max-width: 498px
-            margin-bottom: 70px
+            width: calc(50% - 15px)
+            margin-right: 30px
+            margin-bottom: 30px
+            &:nth-child(2n+1)
+                margin-right: 0
             &:hover
-                box-shadow: 0 25px 30px rgba(0,0,0,0.15)
-                transform: translate(0,-10px)
-                transform: scale(1.01)
-                transition: 0.5s ease
+                box-shadow: 0 15px 20px rgba(0,0,0,0.15)
+                transform: translate(0,-1px)
+                transition: all 0.4s ease
                 .chart-text
                     .chart-links
                         a
                             color: #F00658
-            img
-                max-height: 280px 
-                margin-bottom: 40px
+            a
+                img
+                    max-width: 100%
+                    height: auto
             .chart-text 
+                margin-top: 40px
                 width: 100%
                 padding: 0px 25px 0px
                 .chart-sub
@@ -225,20 +233,20 @@ header
                     line-height: 16px
                 h3
                     font-weight: 400
-                    font-size: 3em
+                    font-size: 2.5em
                     line-height: 36px
                     padding-top: 25px
                 .chart-links
+                    position: absolute
+                    bottom: 0
                     color: #525252
-                    margin-top: 40px
-                    line-height: 26px
                     a 
                         position: relative
                         display: inline-block
                         color: #ddd
                         font-size: 1.54em
                         font-weight: normal
-                        font-family: 'Fira Mono', monospace
+                        font-family: Courier, monospace
                         margin-right: 50px
                         padding: 30px 0
                         &:visited
@@ -246,29 +254,18 @@ header
                         &:active
                             text-decoration: none
                         &:hover
-                            text-decoration: none
-                        &:hover:after
-                            width: 100%
-                        &:after
-                            position: absolute
-                            bottom: 30px
-                            left: 0
-                            content: ''
-                            width: 0%
-                            border-bottom: 1px solid #ae0440
-                            transition: 0.5s ease
+                            text-decoration: none    
 /* Footer */          
 footer
     padding: 100px 0
     font-weight: 600
-    padding-bottom: 200px
     .container
         h3
             width: 100%
-            font-size: 3em
+            font-size: 3.5em
             line-height: 44px
         p
-            font-size: 3em
+            font-size: 3.5em
             line-height: 44px
             max-width: 750px
             a
@@ -278,13 +275,15 @@ footer
                     color: #ae0440
         .email
             padding-top: 50px
-            font-size: 1.7em
+            font-size: 1.6em
             line-height: 26px
             font-weight: normal
-            font-family: 'Overpass Mono', monospace
+            font-family: Courier, monospace
             a
                 position: relative
                 display: inline-block
+                &:hover
+                    color: #f00658
                 &:hover:after
                     width: 100%
                 &:after
@@ -293,59 +292,75 @@ footer
                     bottom: 0
                     left: 0
                     width: 0%
-                    border-bottom: 1px solid #ae0440
+                    border-bottom: 1px solid #f00658
                     transition: 0.5s ease
         .phone
             padding-top: 20px
-            font-size: 1.7em
+            font-size: 1.6em
             line-height: 26px
             font-weight: normal
-            font-family: 'Overpass Mono', monospace
+            font-family: Courier, monospace
             color: #f00658
 /* Media queries */
 /* For larger computers: */
 @media (max-width: 1199px)
     .container
         width: 100%
-        padding: 0 20px
+        padding: 0 3%
     .hello
         .container
             h2
-                font-size: 2.8em
-                max-width: 75vw
+                font-size: 4.2em
+                max-width: 92vw
     .known_technologies
+        margin: 0 1%
+        padding: 0 3%
+        padding-top: 100px
         .container
             h2
-                font-size: 2.3em
-            h3
-                font-size: 2em
+                font-size: 3.2em
+            .chart
+                min-height: 310px
+                .chart-text
+                     
+                    h3
+                        font-size: 2.2em
     .unknown_technologies
         .container
             h2
                 font-size: 2.3em
     .projects
+        margin: 0 1%
+        padding: 100px 3%
         .container
             h2
-                font-size: 2.3em
+                font-size: 3.2em
+            .chart
+                min-height: 530px
+                .chart-text
+                    h3
+                        font-size: 2.2em
     footer
         .container
             h3
-                font-size: 2.8em
+                font-size: 3.2em
             p
-                font-size: 2.8em
-                max-width: 75vw
+                font-size: 3.2em
+                max-width: 65vw
 /* For computers: */
 @media (max-width: 991px)
     .hello
         .container
             h2
-                font-size: 2.4em
+                font-size: 3.5em
     .known_technologies
         .container
             h2
-                font-size: 1.9em
-            h3
-                font-size: 1.6em
+                font-size: 2.5em
+            .chart
+                .chart-text
+                    h3
+                        font-size: 2em
     .unknown_technologies
         .container
             h2
@@ -353,13 +368,18 @@ footer
     .projects
         .container
             h2
-                font-size: 1.9em 
+                font-size: 2.5em
+            .chart
+                min-height: 500px
+                .chart-text
+                    h3
+                        font-size: 2em
     footer
         .container
             h3
-                font-size: 2.4em
+                font-size: 2.5em
             p
-                font-size: 2.4em
+                font-size: 2.5em
 /* For tablets: */
 @media (max-width: 767px)
     body
@@ -381,9 +401,11 @@ footer
         padding: 50px 0
         .container
             h2
-                font-size: 2.3em
+                padding-right: 0
+                font-size: 3em
                 text-align: center
                 max-width: 100%
+                line-height: 40px
     .known_technologies
         padding-top: 50px
         .container
@@ -392,13 +414,12 @@ footer
             -webkit-align-items: center
             align-items: center
             h2
-                font-size: 1.8em
-                text-align: center
-            h3
-                font-size: 1.5em
+                font-size: 2em
                 text-align: center
             .chart
                 margin-right: 0
+                width: 100%
+                max-width: 585px
     .unknown_technologies
         padding-top: 50px
         .container
@@ -419,13 +440,14 @@ footer
             -webkit-align-items: center
             align-items: center
             h2
-                font-size: 1.8em   
+                font-size: 2em   
                 text-align: center
             .chart
                 margin-right: 0
+                width: 100%
+                max-width: 585px
+                min-height: 600px
                 .chart-text 
-                    -height: 100%
-                    -background-color: inherit
                     .chart-links
                         a
                             color: #F00658      
@@ -433,38 +455,28 @@ footer
         padding: 50px 0
         .container
             h3
-                font-size: 2.3em
+                font-size: 2em
                 text-align: center
                 max-width: 100%
             p
-                font-size: 2.3em
+                font-size: 2em
                 text-align: center
                 max-width: 100%
 /* For smart phones: */    
 @media (max-width: 479px)
-    .container
-        padding: 0 15px
     .hello
         .container
             h2
-                font-size: 2em
-                line-height: 40px
+                font-size: 2.5em
+                line-height: 30px
     .known_technologies
-        margin: 0 10px
         .container
-            h2
-                font-size: 1.6em
-            h3
-                font-size: 1.3em
             .chart
-                margin-right: 0
-                width: 65vw
-                min-width: 65vw
+                min-height: 370px
                 .chart-text 
-                    h4
-                        font-size: 2.3em
+                    h3
+                        font-size: 1.7em
     .unknown_technologies
-        margin: 0 10px
         .container
             h2
                 font-size: 1.6em
@@ -475,15 +487,9 @@ footer
                     h3
                         font-size: 2.3em
     .projects
-        margin: 0 10px
         .container
-            h2
-                font-size: 1.6em
-    footer
-        .container
-            h3
-                font-size: 2em
-            p
-                font-size: 2em
-            .email
-                font-size: 1.55em
+            .chart
+                min-height: 500px
+                .chart-text 
+                    h3
+                        font-size: 1.7em

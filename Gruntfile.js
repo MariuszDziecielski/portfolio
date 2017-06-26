@@ -23,7 +23,7 @@ module.exports = function (grunt) {
             }
         },
         jshint: {
-            all: ['js/*.js']
+            all: ['Gruntfile.js', 'js/script.js']
         },
         watch: {
             sass: {
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
                 }
             },
             jshint: {
-                files: ['js/*.js'],
+                files: ['Gruntfile.js', 'js/script.js'],
                 tasks: ['jshint'],
                 options: {
                     spawn: false
