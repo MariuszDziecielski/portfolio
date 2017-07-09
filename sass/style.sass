@@ -1,13 +1,30 @@
 @import reset
+// Variables
+$primFont: Helvetica, Arial, sans-serif
+$secFont: Courier, monospace
+$blackColor: #525252
+$whiteColor: #fff
+$redColor: #f00658
+$greyColor: #f2f2f2
+$darkGreyColor: #ccc
+// Mixins
+=flex-dir-align($direction: column, $align: center)
+    -webkit-flex-direction: $direction
+    flex-direction: $direction
+    -webkit-align-items: $align
+    align-items: $align
+=pos-abs($bottom: 0, $left: auto)
+    position: absolute
+    bottom: $bottom
+    left: $left
 body 
     margin: 0
-    padding: 0
     font-size: 62.5%
     text-align: left
-    padding-top: 100px
-    background: #fff 
-    font-family: Helvetica, Arial, sans-serif
-    color: #525252
+    padding: 100px 0 0
+    background: $whiteColor 
+    font-family: $primFont
+    color: $blackColor
 * 
     box-sizing: border-box    
 img 
@@ -45,8 +62,8 @@ header
     border-bottom: 1px solid #eee
     z-index: 100
     .navbar-default
-        background: #fff
-        font-family: Courier, monospace
+        background: $whiteColor
+        font-family: $secFont
         margin: 0 auto
         font-size: 1.6em
         .navbar-collapse
@@ -60,27 +77,25 @@ header
                     padding-right: 60px
                     &.active
                         a
-                            background: #fff
+                            background: $whiteColor
                             cursor: default
-                            color: #f00658
+                            color: $redColor
                             &:hover:after
                                 width: 0%    
                     a
                         padding: 0
                         line-height: 100px
-                        color: #525252
+                        color: $blackColor
                         text-decoration: none
                         &:hover
-                            color: #f00658  
+                            color: $redColor  
                         &:hover:after
                             width: 100%
                         &:after
                             content: ''
-                            position: absolute
-                            bottom: 37px
-                            left: 0
+                            +pos-abs(37px, 0)
                             width: 0%
-                            border-bottom: 1px solid #f00658
+                            border-bottom: 1px solid $redColor
                             transition: 0.5s ease      
 /* Hello */
 .hello
@@ -90,79 +105,65 @@ header
         h1
             display: none
         h2
-            font-size: 4.5em
+            font: 600 4.5em/60px $primFont
             max-width: 1100px
-            line-height: 60px
             padding-right: 13%
             span
-                color: #f00658
+                color: $redColor
                 &.language
-                    color: #525252
+                    color: $blackColor
                     text-transform: uppercase
 /* Known_technologies */
 .known_technologies
-    background-color: #f2f2f2
+    background-color: $greyColor
     margin: 0 30px
     padding-top: 100px
     .container
         h2
             padding: 0 0 50px 0
             width: 100%
-            font-size: 3.5em
-            font-weight: 600
-            color: #525252
+            font: 600 3.5em $primFont
+            color: $blackColor
         .chart
             position: relative
             min-height: 300px
-            background-color: #fff
+            background-color: $whiteColor
             width: calc(50% - 15px)
-            margin-right: 30px
-            margin-bottom: 30px
+            margin: 0 30px 30px 0
             &:nth-child(2n+1)
                 margin-right: 0
             img
                 margin: 0 auto
                 margin-top: 35px
                 height: 80px
-            .php-logo
-                height: 83px
-            .seo-logo
-                height: 83px
             .chart-text 
                 margin-top: 40px
                 width: 100%
                 padding: 0px 25px 0px
                 .chart-sub
                     text-transform: uppercase
-                    font-weight: 600
-                    font-size: 1.3em
-                    color: #ccc
-                    line-height: 20px
+                    font: 600 1.3em/20px $primFont
+                    color: $darkGreyColor
                 h3
-                    font-weight: 600
-                    font-size: 2.5em
-                    line-height: 36px
-                    position: absolute
-                    bottom: 25px
+                    font: 600 2.5em/36px $primFont
+                    +pos-abs(25px)
 /* Projects */
 .projects
-    background-color: #f2f2f2
+    background-color: $greyColor
     margin: 0 30px
     padding: 100px 0
     .container
         h2
             padding: 0 0 50px 0
             width: 100%
-            font-size: 3.5em
-            font-weight: 600
-            color: #525252
+            font: 600 3.5em $primFont
+            color: $blackColor
         .chart
             position: relative
             min-height: 700px
-            background-color: #fff
+            background-color: $whiteColor
             width: calc(50% - 15px)
-            margin-right: 30px
-            margin-bottom: 30px
+            margin: 0 30px 30px 0
             &:nth-child(2n+1)
                 margin-right: 0
             &:hover
@@ -172,7 +173,7 @@ header
                 .chart-text
                     .chart-links
                         a
-                            color: #F00658
+                            color: $redColor
             a
                 img
                     max-width: 100%
@@ -183,38 +184,26 @@ header
                 padding: 0px 25px 0px
                 .chart-sub
                     text-transform: uppercase
-                    font-weight: 600
-                    font-size: 1.3em
-                    color: #ccc
-                    line-height: 16px
+                    color: $darkGreyColor
+                    font: 600 1.3em/16px $primFont
                 h3
-                    font-weight: 600
-                    font-size: 2.5em
-                    line-height: 36px
+                    font: 600 2.5em/36px $primFont
                     padding-top: 25px
                 .chart-desc
-                    font-size: 1.6em
-                    line-height: 26px
+                    font: 1.6em/26px $primFont
                     padding: 20px 0
                 .chart-links
-                    position: absolute
-                    bottom: 0
-                    color: #525252
+                    +pos-abs()
+                    color: $blackColor
                     a 
                         position: relative
                         display: inline-block
                         color: #ddd
-                        font-size: 1.54em
-                        font-weight: normal
-                        font-family: Courier, monospace
+                        font: normal 1.54em $secFont
                         margin-right: 50px
                         padding: 30px 0
-                        &:visited
+                        &:link
                             text-decoration: none
-                        &:active
-                            text-decoration: none
-                        &:hover
-                            text-decoration: none    
 /* Footer */          
 footer
     padding: 100px 0
@@ -222,45 +211,35 @@ footer
     .container
         h3
             width: 100%
-            font-size: 3.5em
-            line-height: 44px
+            font: 600 3.5em/44px $primFont
         p
-            font-size: 3.5em
-            line-height: 44px
+            font: 600 3.5em/44px $primFont
             max-width: 750px
             a
                 text-decoration: none
-                color: #f00658
+                color: $redColor
                 &:hover
                     color: #ae0440
         .email
             padding-top: 50px
-            font-size: 1.6em
-            line-height: 26px
-            font-weight: normal
-            font-family: Courier, monospace
+            font: normal 1.6em/26px $secFont
             a
                 position: relative
                 display: inline-block
                 &:hover
-                    color: #f00658
+                    color: $redColor
                 &:hover:after
                     width: 100%
                 &:after
                     content: ''
-                    position: absolute
-                    bottom: 0
-                    left: 0
+                    +pos-abs(0, 0)
                     width: 0%
-                    border-bottom: 1px solid #f00658
+                    border-bottom: 1px solid $redColor
                     transition: 0.5s ease
         .phone
             padding-top: 20px
-            font-size: 1.6em
-            line-height: 26px
-            font-weight: normal
-            font-family: Courier, monospace
-            color: #f00658
+            font: normal 1.6em/26px $secFont
+            color: $redColor
 /* Media queries */
 /* For larger computers: */
 @media (max-width: 1199px)
@@ -274,8 +253,7 @@ footer
                 max-width: 92vw
     .known_technologies
         margin: 0 1%
-        padding: 0 3%
-        padding-top: 100px
+        padding: 100px 3% 0 3%
         .container
             h2
                 font-size: 3.2em
@@ -297,10 +275,10 @@ footer
                         font-size: 2.2em
     footer
         .container
-            h3
-                font-size: 3.2em
+            h3,
             p
                 font-size: 3.2em
+            p
                 max-width: 65vw
 /* For computers: */
 @media (max-width: 991px)
@@ -327,8 +305,7 @@ footer
                         font-size: 2em
     footer
         .container
-            h3
-                font-size: 2.5em
+            h3,
             p
                 font-size: 2.5em
 /* For tablets: */
@@ -353,17 +330,13 @@ footer
         .container
             h2
                 padding-right: 0
-                font-size: 3em
+                font: 600 3em/40px $primFont
                 text-align: center
                 max-width: 100%
-                line-height: 40px
     .known_technologies
         padding-top: 50px
         .container
-            -webkit-flex-direction: column
-            flex-direction: column
-            -webkit-align-items: center
-            align-items: center
+            +flex-dir-align()
             h2
                 font-size: 2em
                 text-align: center
@@ -374,10 +347,7 @@ footer
     .projects
         padding-top: 50px
         .container
-            -webkit-flex-direction: column
-            flex-direction: column
-            -webkit-align-items: center
-            align-items: center
+            +flex-dir-align()
             h2
                 font-size: 2em   
                 text-align: center
@@ -389,14 +359,11 @@ footer
                 .chart-text 
                     .chart-links
                         a
-                            color: #F00658      
+                            color: $redColor     
     footer
         padding: 50px 0
         .container
-            h3
-                font-size: 2em
-                text-align: center
-                max-width: 100%
+            h3,
             p
                 font-size: 2em
                 text-align: center
@@ -406,8 +373,7 @@ footer
     .hello
         .container
             h2
-                font-size: 2.5em
-                line-height: 30px
+                font: 600 2.5em/30px $primFont
     .known_technologies
         .container
             .chart
