@@ -1,5 +1,5 @@
 $(function () {
-    var $listItems = $('header li');
+    const $listItems = $('header li');
     $listItems.each(function (index, elem) {
         $(elem).click(function () {
             $listItems.removeClass('active');
@@ -13,7 +13,7 @@ $(function () {
     });
     $('.navbar-nav li a').each(function (index, elem) {
         $(elem).click(function () {
-            var href = $(elem).attr('href');
+            const href = $(elem).attr('href');
             $(href).animatescroll({
                 scrollSpeed: 4000,
                 easing: 'easeOutBack',
