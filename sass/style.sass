@@ -17,17 +17,17 @@ $darkGreyColor: #ccc
     position: absolute
     bottom: $bottom
     left: $left
-body 
+body
     margin: 0
     font-size: 62.5%
     text-align: left
     padding: 100px 0 0
-    background: $whiteColor 
+    background: $whiteColor
     font-family: $primFont
     color: $blackColor
-* 
-    box-sizing: border-box    
-img 
+*
+    box-sizing: border-box
+img
     max-width: 100%
     height: auto
 .flex
@@ -48,7 +48,7 @@ img
 .flex-wrap
     -webkit-flex-wrap: wrap
     flex-wrap: wrap
-/* Container */  
+/* Container */
 .container
     max-width: 1200px
     margin: 0 auto
@@ -81,14 +81,14 @@ header
                             cursor: default
                             color: $redColor
                             &:hover:after
-                                width: 0%    
+                                width: 0%
                     a
                         padding: 0
                         line-height: 100px
                         color: $blackColor
                         text-decoration: none
                         &:hover
-                            color: $redColor  
+                            color: $redColor
                         &:hover:after
                             width: 100%
                         &:after
@@ -96,7 +96,7 @@ header
                             +pos-abs(37px, 0)
                             width: 0%
                             border-bottom: 1px solid $redColor
-                            transition: 0.5s ease      
+                            transition: 0.5s ease
 /* Hello */
 .hello
     padding: 100px 0
@@ -136,7 +136,7 @@ header
                 margin: 0 auto
                 margin-top: 35px
                 height: 80px
-            .chart-text 
+            .chart-text
                 margin-top: 40px
                 width: 100%
                 padding: 0px 25px 0px
@@ -178,7 +178,7 @@ header
                 img
                     max-width: 100%
                     height: auto
-            .chart-text 
+            .chart-text
                 margin-top: 40px
                 width: 100%
                 padding: 0px 25px 0px
@@ -195,7 +195,7 @@ header
                 .chart-links
                     +pos-abs()
                     color: $blackColor
-                    a 
+                    a
                         position: relative
                         display: inline-block
                         color: #ddd
@@ -204,7 +204,7 @@ header
                         padding: 30px 0
                         &:link
                             text-decoration: none
-/* Footer */          
+/* Footer */
 footer
     padding: 100px 0
     font-weight: 600
@@ -259,7 +259,7 @@ footer
                 font-size: 3.2em
             .chart
                 min-height: 310px
-                .chart-text  
+                .chart-text
                     h3
                         font-size: 2.2em
     .projects
@@ -349,17 +349,17 @@ footer
         .container
             +flex-dir-align()
             h2
-                font-size: 2em   
+                font-size: 2em
                 text-align: center
             .chart
                 margin-right: 0
                 width: 100%
                 max-width: 585px
                 min-height: 700px
-                .chart-text 
+                .chart-text
                     .chart-links
                         a
-                            color: $redColor     
+                            color: $redColor
     footer
         padding: 50px 0
         .container
@@ -368,7 +368,7 @@ footer
                 font-size: 2em
                 text-align: center
                 max-width: 100%
-/* For smart phones: */    
+/* For smart phones: */
 @media (max-width: 479px)
     .hello
         .container
@@ -378,14 +378,14 @@ footer
         .container
             .chart
                 min-height: 370px
-                .chart-text 
+                .chart-text
                     h3
                         font-size: 1.7em
     .projects
         .container
             .chart
                 min-height: 760px
-                .chart-text 
+                .chart-text
                     h3
                         font-size: 1.7em
                     .chart-links
