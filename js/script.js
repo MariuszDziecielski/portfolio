@@ -1,24 +1,22 @@
-$(function () {
-    const $listItems = $('header li');
-    $listItems.each(function (index, elem) {
-        $(elem).click(function () {
-            $listItems.removeClass('active');
-            $(elem).addClass('active');
-        });
+const $listItems = $('header li');
+$listItems.each((index, elem) => {
+    $(elem).click(() => {
+        $listItems.removeClass('active');
+        $(elem).addClass('active');
     });
-    $('.navbar-collapse a').click(function () {
-        if ($('.navbar-collapse').hasClass('in')) {
-            $('.navbar-toggle').click();
-        }
-    });
-    $('.navbar-nav li a').each(function (index, elem) {
-        $(elem).click(function () {
-            const href = $(elem).attr('href');
-            $(href).animatescroll({
-                scrollSpeed: 4000,
-                easing: 'easeOutBack',
-                padding: 40
-            });
+});
+$('.navbar-collapse a').click(() => {
+    if ($('.navbar-collapse').hasClass('in')) {
+        $('.navbar-toggle').click();
+    }
+});
+$('.navbar-nav li a').each((index, elem) => {
+    $(elem).click(() => {
+        const href = $(elem).attr('href');
+        $(href).animatescroll({
+            scrollSpeed: 4000,
+            easing: 'easeOutBack',
+            padding: 40
         });
     });
 });
