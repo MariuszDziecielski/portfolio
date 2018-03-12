@@ -1,0 +1,578 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  font-size: 62.5%;
+  text-align: left;
+  padding: 100px 0 0;
+  background: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #525252;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.column {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.items-center {
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.items-start {
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.content-center {
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.flex-wrap {
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.container,
+.hello,
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+header .navbar-default {
+  background: #fff;
+  font-family: Courier, monospace;
+  margin: 0 auto;
+  font-size: 1.6em;
+}
+
+header .navbar-default .navbar-collapse {
+  max-height: 100%;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav li {
+  font-weight: normal;
+  padding-right: 60px;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav li.active a {
+  background: #fff;
+  cursor: default;
+  color: #f00658;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav li.active a:hover:after {
+  width: 0%;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav li a {
+  padding: 0;
+  line-height: 100px;
+  color: #525252;
+  text-decoration: none;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav li a:hover {
+  color: #f00658;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav li a:hover:after {
+  width: 100%;
+}
+
+header .navbar-default .navbar-collapse .navbar-nav li a:after {
+  content: '';
+  position: absolute;
+  bottom: 37px;
+  left: 0;
+  width: 0%;
+  border-bottom: 1px solid #f00658;
+  transition: 0.5s ease;
+}
+
+/* Hello */
+.hello {
+  padding: 100px 0;
+  font-weight: 600;
+}
+
+.hello h1 {
+  display: none;
+}
+
+.hello h2 {
+  font: 600 4.5em/60px Helvetica, Arial, sans-serif;
+  max-width: 1100px;
+  padding-right: 13%;
+}
+
+.hello h2 span {
+  color: #f00658;
+}
+
+.hello h2 span.language {
+  color: #525252;
+  text-transform: uppercase;
+}
+
+/* Known_technologies */
+.known_technologies {
+  background-color: #f2f2f2;
+  margin: 0 30px;
+  padding-top: 100px;
+}
+
+.known_technologies .container h2 {
+  padding: 0 0 50px 0;
+  width: 100%;
+  font: 600 3.5em Helvetica, Arial, sans-serif;
+  color: #525252;
+}
+
+.known_technologies .container .chart {
+  position: relative;
+  min-height: 300px;
+  background-color: #fff;
+  width: calc(50% - 15px);
+  margin: 0 30px 30px 0;
+}
+
+.known_technologies .container .chart:nth-child(2n+1) {
+  margin-right: 0;
+}
+
+.known_technologies .container .chart img {
+  margin: 0 auto;
+  margin-top: 35px;
+  height: 80px;
+}
+
+.known_technologies .container .chart .chart-text {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0px 25px 0px;
+}
+
+.known_technologies .container .chart .chart-text .chart-sub {
+  text-transform: uppercase;
+  font: 600 1.3em/20px Helvetica, Arial, sans-serif;
+  color: #ccc;
+}
+
+.known_technologies .container .chart .chart-text h3 {
+  font: 600 2.5em/36px Helvetica, Arial, sans-serif;
+  position: absolute;
+  bottom: 25px;
+  left: auto;
+}
+
+/* Projects */
+.projects {
+  background-color: #f2f2f2;
+  margin: 0 30px;
+  padding: 100px 0;
+}
+
+.projects .container h2 {
+  padding: 0 0 50px 0;
+  width: 100%;
+  font: 600 3.5em Helvetica, Arial, sans-serif;
+  color: #525252;
+}
+
+.projects .container .chart {
+  position: relative;
+  min-height: 700px;
+  background-color: #fff;
+  width: calc(50% - 15px);
+  margin: 0 30px 30px 0;
+}
+
+.projects .container .chart:nth-child(2n+1) {
+  margin-right: 0;
+}
+
+.projects .container .chart:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+  transform: translate(0, -1px);
+  transition: all 0.4s ease;
+}
+
+.projects .container .chart:hover .chart-text .chart-links a {
+  color: #f00658;
+}
+
+.projects .container .chart a img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projects .container .chart .chart-text {
+  margin-top: 40px;
+  width: 100%;
+  padding: 0px 25px 0px;
+}
+
+.projects .container .chart .chart-text .chart-sub {
+  text-transform: uppercase;
+  color: #ccc;
+  font: 600 1.3em/16px Helvetica, Arial, sans-serif;
+}
+
+.projects .container .chart .chart-text h3 {
+  font: 600 2.5em/36px Helvetica, Arial, sans-serif;
+  padding-top: 25px;
+}
+
+.projects .container .chart .chart-text .chart-desc {
+  font: 1.6em/26px Helvetica, Arial, sans-serif;
+  padding: 20px 0;
+}
+
+.projects .container .chart .chart-text .chart-links {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  color: #525252;
+}
+
+.projects .container .chart .chart-text .chart-links a {
+  position: relative;
+  display: inline-block;
+  color: #ddd;
+  font: normal 1.54em Courier, monospace;
+  margin-right: 50px;
+  padding: 30px 0;
+}
+
+.projects .container .chart .chart-text .chart-links a:link {
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  padding: 100px 0;
+  font-weight: 600;
+}
+
+footer h3 {
+  width: 100%;
+  font: 600 3.5em/44px Helvetica, Arial, sans-serif;
+}
+
+footer p {
+  font: 600 3.5em/44px Helvetica, Arial, sans-serif;
+  max-width: 750px;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #f00658;
+}
+
+footer p a:hover {
+  color: #ae0440;
+  text-decoration: none;
+}
+
+footer .email {
+  padding-top: 50px;
+  font: normal 1.6em/26px Courier, monospace;
+}
+
+footer .email a {
+  position: relative;
+  display: inline-block;
+}
+
+footer .email a:hover {
+  color: #f00658;
+}
+
+footer .email a:hover:after {
+  width: 100%;
+}
+
+footer .email a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 1px solid #f00658;
+  transition: 0.5s ease;
+}
+
+footer .phone {
+  padding-top: 20px;
+  font: normal 1.6em/26px Courier, monospace;
+  color: #f00658;
+}
+
+/* Media queries */
+/* For larger computers: */
+@media (max-width: 1199px) {
+  .container,
+  .hello,
+  footer {
+    width: 100%;
+  }
+  .container {
+    padding: 0 3%;
+  }
+  .hello {
+    padding: 100px 3%;
+  }
+  .hello h2 {
+    font-size: 4.2em;
+    max-width: 92vw;
+  }
+  .known_technologies {
+    margin: 0 1%;
+    padding: 100px 3% 0 3%;
+  }
+  .known_technologies .container h2 {
+    font-size: 3.2em;
+  }
+  .known_technologies .container .chart {
+    min-height: 310px;
+  }
+  .known_technologies .container .chart .chart-text h3 {
+    font-size: 2.2em;
+  }
+  .projects {
+    margin: 0 1%;
+    padding: 100px 3%;
+  }
+  .projects .container h2 {
+    font-size: 3.2em;
+  }
+  .projects .container .chart {
+    min-height: 660px;
+  }
+  .projects .container .chart .chart-text h3 {
+    font-size: 2.2em;
+  }
+  footer {
+    padding: 100px 3%;
+  }
+  footer h3,
+  footer p {
+    font-size: 3.2em;
+  }
+  footer p {
+    max-width: 65vw;
+  }
+}
+
+/* For computers: */
+@media (max-width: 991px) {
+  .hello h2 {
+    font-size: 3.5em;
+  }
+  .known_technologies .container h2 {
+    font-size: 2.5em;
+  }
+  .known_technologies .container .chart .chart-text h3 {
+    font-size: 2em;
+  }
+  .projects .container h2 {
+    font-size: 2.5em;
+  }
+  .projects .container .chart {
+    min-height: 680px;
+  }
+  .projects .container .chart .chart-text h3 {
+    font-size: 2em;
+  }
+  footer h3,
+  footer p {
+    font-size: 2.5em;
+  }
+}
+
+/* For tablets: */
+@media (max-width: 767px) {
+  body {
+    padding-top: 50px;
+  }
+  header .navbar-default .container .navbar-header .navbar-toggle {
+    background-color: inherit;
+  }
+  header .navbar-default .container .navbar-header .navbar-toggle:hover {
+    background-color: inherit;
+  }
+  header .navbar-default .container .navbar-collapse .navbar-nav li a {
+    line-height: 60px;
+  }
+  header .navbar-default .container .navbar-collapse .navbar-nav li a:hover:after {
+    width: 0%;
+  }
+  .hello {
+    padding: 50px 3%;
+  }
+  .hello h2 {
+    padding-right: 0;
+    font: 600 3em/40px Helvetica, Arial, sans-serif;
+    text-align: center;
+    max-width: 100%;
+  }
+  .known_technologies {
+    padding-top: 50px;
+  }
+  .known_technologies .container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .known_technologies .container h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .known_technologies .container .chart {
+    margin-right: 0;
+    width: 100%;
+    max-width: 585px;
+  }
+  .projects {
+    padding-top: 50px;
+  }
+  .projects .container {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .projects .container h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  .projects .container .chart {
+    margin-right: 0;
+    width: 100%;
+    max-width: 585px;
+    min-height: 700px;
+  }
+  .projects .container .chart .chart-text .chart-links a {
+    color: #f00658;
+  }
+  footer {
+    padding: 50px 3%;
+  }
+  footer h3,
+  footer p {
+    font-size: 2em;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+/* For smart phones: */
+@media (max-width: 479px) {
+  .hello h2 {
+    font: 600 2.5em/30px Helvetica, Arial, sans-serif;
+  }
+  .known_technologies .container .chart {
+    min-height: 370px;
+  }
+  .known_technologies .container .chart .chart-text h3 {
+    font-size: 1.7em;
+  }
+  .projects .container .chart {
+    min-height: 760px;
+  }
+  .projects .container .chart .chart-text h3 {
+    font-size: 1.7em;
+  }
+  .projects .container .chart .chart-text .chart-links a {
+    margin-right: 16vw;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
