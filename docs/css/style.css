@@ -360,8 +360,27 @@ footer p a:hover {
   text-decoration: none;
 }
 
-footer .email {
-  padding-top: 50px;
+footer ul,
+footer .email,
+footer .phone {
+  padding-top: 40px;
+}
+
+footer ul li {
+  padding-right: 30px;
+  font: normal 2.4em/26px Helvetica, Arial, sans-serif;
+}
+
+footer ul li a i {
+  color: #ccc;
+}
+
+footer ul li a i:hover {
+  color: #f00658;
+}
+
+footer .email,
+footer .phone {
   font: normal 1.6em/26px Courier, monospace;
 }
 
@@ -389,8 +408,6 @@ footer .email a:after {
 }
 
 footer .phone {
-  padding-top: 20px;
-  font: normal 1.6em/26px Courier, monospace;
   color: #f00658;
 }
 
@@ -550,6 +567,10 @@ footer .phone {
     font-size: 2em;
     text-align: center;
     max-width: 100%;
+  }
+  footer .flex {
+    font-size: 1em;
+    justify-content: center;
   }
 }
 
