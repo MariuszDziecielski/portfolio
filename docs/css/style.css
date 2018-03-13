@@ -572,6 +572,9 @@ footer .phone {
     font-size: 1em;
     justify-content: center;
   }
+  footer .flex li:nth-child(2) {
+    padding-right: 0;
+  }
 }
 
 /* For smart phones: */
