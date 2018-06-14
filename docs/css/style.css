@@ -195,11 +195,6 @@ header .navbar-default .navbar-collapse .navbar-nav li a:after {
   color: #f00658;
 }
 
-.hello h2 span.language {
-  color: #525252;
-  text-transform: uppercase;
-}
-
 /* Known_technologies */
 .known_technologies {
   background-color: #f2f2f2;
